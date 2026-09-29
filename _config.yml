@@ -1,0 +1,18 @@
+title: Daniil Lysenko
+description: Research in astrophysics, spectroscopy, and numerical physics.
+url: "https://dlysenko05.github.io"
+baseurl: ""
+
+name: Daniil Lysenko
+role: Undergraduate researcher in astrophysics
+affiliation: "[Add exact affiliation wording]"
+email: "[add-public-email]"
+github_username: dlysenko05
+
+markdown: kramdown
+permalink: pretty
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock

@@ -1,0 +1,13 @@
+<footer class="site-footer">
+  <div class="shell footer-grid">
+    <div>
+      <strong>{{ site.name }}</strong><br>
+      <span>{{ site.role }}</span>
+    </div>
+    <div class="footer-links">
+      <a href="https://github.com/{{ site.github_username }}">GitHub</a>
+      {% unless site.email contains '[' %}<a href="mailto:{{ site.email }}">Email</a>{% endunless %}
+      <a href="{{ '/cv/' | relative_url }}">CV</a>
+    </div>
+  </div>
+</footer>
