@@ -1,1 +1,21 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Page not found · Daniil Lysenko</title><link rel="stylesheet" href="styles.css"><link rel="icon" href="assets/favicon.svg" type="image/svg+xml"></head><body><main class="shell error-page"><p class="eyebrow">404 / Page not found</p><h1>Page not found.</h1><p>There isn't a page at that address.</p><a class="underlined-link" href="index.html">Back to the homepage ↗</a></main></body></html>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Page not found · Daniil Lysenko</title><script>
+(function () {
+  var preferred = null;
+  try { preferred = localStorage.getItem('daniil-site-theme'); } catch (e) {}
+  var systemDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  document.documentElement.setAttribute('data-theme', preferred === 'dark' || preferred === 'light' ? preferred : (systemDark ? 'dark' : 'light'));
+})();
+</script>
+  <link rel="stylesheet" href="styles.css"><link rel="icon" href="assets/favicon.svg" type="image/svg+xml"></head><body><a class="skip-link" href="#main">Skip to content</a>  <header class="site-header"><div class="shell nav-layout">
+    <a class="brand" href="index.html" aria-label="Daniil Lysenko, home">Daniil Lysenko<span class="brand-mark" aria-hidden="true">.</span></a>
+    <nav class="primary-nav" id="primary-nav" aria-label="Main navigation"><a href="index.html">Home</a>
+<a href="research.html">Research</a>
+<a href="projects.html">Projects</a>
+<a href="about.html">About</a>
+<a href="cv.html">CV</a>
+<a href="contact.html">Contact</a></nav>
+    <div class="nav-actions"><button class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false" title="Change color theme"><span class="theme-glyph" aria-hidden="true">☾</span><span class="theme-word">Dark</span></button><button class="menu-toggle" type="button" aria-controls="primary-nav" aria-expanded="false" aria-label="Open navigation"><span></span><span></span><span></span><span class="menu-word">Menu</span></button></div>
+  </div></header><main id="main" class="shell error-page"><p class="eyebrow">404 / Page not found</p><h1>Page not found.</h1><p>There isn't a page at that address.</p><a class="underlined-link" href="index.html">Back to the homepage ↗</a></main>  <footer class="site-footer"><div class="shell footer-layout">
+    <span>© <span data-current-year>2026</span> Daniil Lysenko</span>
+    <div class="footer-right"><a href="mailto:daniil.lysenko5002@gmail.com">Email</a><span class="footer-separator" aria-hidden="true">/</span><a href="https://github.com/dlysenko05" rel="me noopener" target="_blank">GitHub ↗</a><span class="footer-separator" aria-hidden="true">/</span><a href="cv.html">CV</a></div>
+  </div></footer><script src="site.js" defer></script></body></html>

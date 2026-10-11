@@ -12,6 +12,14 @@
   <meta property="og:url" content="https://dlysenko05.github.io/">
   <link rel="canonical" href="https://dlysenko05.github.io/">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <script>
+(function () {
+  var preferred = null;
+  try { preferred = localStorage.getItem('daniil-site-theme'); } catch (e) {}
+  var systemDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  document.documentElement.setAttribute('data-theme', preferred === 'dark' || preferred === 'light' ? preferred : (systemDark ? 'dark' : 'light'));
+})();
+</script>
   <link rel="stylesheet" href="styles.css">
   <title>Astrophysics and computational physics · Daniil Lysenko</title>
 </head>
@@ -19,13 +27,13 @@
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header"><div class="shell nav-layout">
     <a class="brand" href="index.html" aria-label="Daniil Lysenko, home">Daniil Lysenko<span class="brand-mark" aria-hidden="true">.</span></a>
-    <button class="menu-toggle" type="button" aria-controls="primary-nav" aria-expanded="false" aria-label="Open navigation"><span></span><span></span><span></span><span class="menu-word">Menu</span></button>
     <nav class="primary-nav" id="primary-nav" aria-label="Main navigation"><a href="index.html" aria-current="page">Home</a>
 <a href="research.html">Research</a>
 <a href="projects.html">Projects</a>
 <a href="about.html">About</a>
 <a href="cv.html">CV</a>
 <a href="contact.html">Contact</a></nav>
+    <div class="nav-actions"><button class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false" title="Change color theme"><span class="theme-glyph" aria-hidden="true">☾</span><span class="theme-word">Dark</span></button><button class="menu-toggle" type="button" aria-controls="primary-nav" aria-expanded="false" aria-label="Open navigation"><span></span><span></span><span></span><span class="menu-word">Menu</span></button></div>
   </div></header>
   <main id="main">
 
@@ -34,20 +42,30 @@
     <p class="eyebrow">Physics undergraduate · Alferov University</p>
     <h1>Astrophysics,<br><em>from spectra</em><br>to simulations.</h1>
     <p class="lede">I'm Daniil Lysenko, a physics undergraduate at Alferov University. At the Ioffe Institute I study quasar absorption spectra; my other work spans gamma-ray bursts, neutron-star models, and computational physics.</p>
-    <div class="link-actions"><a class="button" href="research.html">Research <span aria-hidden="true">↗</span></a><a class="text-action" href="cv.html">Curriculum vitae <span aria-hidden="true">→</span></a></div>
+    <div class="link-actions"><a class="button" href="quasar.html">Explore quasar research <span aria-hidden="true">↗</span></a><a class="text-action" href="research.html">Other research <span aria-hidden="true">→</span></a></div>
   </div>
   <aside class="hero-figure" aria-labelledby="mini-figure-title">
     <div class="figure-top"><p class="eyebrow">From my current research</p><span class="figure-serial">4C 04.81 / Fe II</span></div>
     <h2 id="mini-figure-title">Absorber covering and excitation</h2>
-    <img src="assets/feii-covering.svg" alt="Plot of six estimated Fe II effective covering fractions by excitation level, showing lower covering at higher levels" width="560" height="330">
+    <img src="assets/qso/covering_excitation.webp" alt="Observed Fe II effective covering fractions decrease with excitation index in the working sample" width="1037" height="684" fetchpriority="high">
     <p class="figure-note">Working estimates for Fe II levels j = 0–5. The trend is excitation-dependent; an independent wavelength effect is not yet established.</p>
-    <a href="research.html#quasar" class="figure-link">Read about the analysis ↗</a>
+    <a href="quasar.html" class="figure-link">See the measurements and models ↗</a>
   </aside>
+</section>
+<section class="quasar-spotlight section" aria-labelledby="spotlight-title">
+  <div class="shell spotlight-layout">
+    <div class="spotlight-text"><p class="eyebrow">Featured research · Ioffe Institute</p>
+      <h2 id="spotlight-title">How absorbing gas partly covers a quasar</h2>
+      <p>Working with Dr. Sergei Balashev, I analyze high-resolution spectra of quasar 4C 04.81. Fe II absorption lines reveal differences in effective covering across excitation levels. Whether they independently reveal the accretion disk's temperature structure is a more difficult question.</p>
+      <a href="quasar.html" class="underlined-link">Research, results, and visualizations ↗</a>
+    </div>
+    <figure class="spotlight-visual"><a href="quasar.html#geometry" aria-label="View quasar disk model and its caveats"><img src="assets/qso/disk_projection_wavelengths.webp" width="4197" height="1371" alt="Three numerical images of an accretion disk at different wavelengths with projected absorbing boundaries" loading="lazy" decoding="async"></a><figcaption>Calculated disk brightness and illustrative absorbing-zone boundaries at three wavelengths. The geometry is model-dependent, not a resolved image of the quasar.</figcaption></figure>
+  </div>
 </section>
 <section class="section surface" aria-labelledby="recent-title"><div class="shell">
   <div class="section-top"><div><p class="eyebrow">Research</p><h2 id="recent-title">Current and recent work</h2></div><a class="quiet-link" href="research.html">All research ↗</a></div>
   <div class="three-grid">
-    <article class="summary-card"><div class="card-top"><span class="card-index">01</span><span class="tag">Ioffe Institute</span></div><h3>Quasar 4C 04.81</h3><p>Using VLT spectra to study partial covering, Fe II excitation, and what absorption can reveal about absorber–disk geometry.</p><a class="card-link" href="research.html#quasar">Quasar research ↗</a></article>
+    <article class="summary-card"><div class="card-top"><span class="card-index">01</span><span class="tag">Ioffe Institute</span></div><h3>Quasar 4C 04.81</h3><p>Fe II excitation-dependent covering in VLT absorption spectra; quantitative fits, disk modeling, and open questions.</p><a class="card-link" href="quasar.html">Quasar research and figures ↗</a></article>
     <article class="summary-card"><div class="card-top"><span class="card-index">02</span><span class="tag">Ioffe Institute</span></div><h3>Gamma-ray burst timing</h3><p>Bayesian reconstruction of GRB light curves using Poisson count models and random Fourier features, tested on Fermi/GBM observations.</p><a class="card-link" href="research.html#grb">GRB research ↗</a></article>
     <article class="summary-card"><div class="card-top"><span class="card-index">03</span><span class="tag">Neutron-star physics</span></div><h3>Structure and magnetic fields</h3><p>Relativistic stellar-structure calculations and numerical studies of magnetic winding, resistive damping, and torsional feedback.</p><a class="card-link" href="research.html#neutron-stars">Neutron-star research ↗</a></article>
   </div>

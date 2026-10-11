@@ -12,6 +12,14 @@
   <meta property="og:url" content="https://dlysenko05.github.io/research.html">
   <link rel="canonical" href="https://dlysenko05.github.io/research.html">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <script>
+(function () {
+  var preferred = null;
+  try { preferred = localStorage.getItem('daniil-site-theme'); } catch (e) {}
+  var systemDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  document.documentElement.setAttribute('data-theme', preferred === 'dark' || preferred === 'light' ? preferred : (systemDark ? 'dark' : 'light'));
+})();
+</script>
   <link rel="stylesheet" href="styles.css">
   <title>Research · Daniil Lysenko</title>
 </head>
@@ -19,17 +27,17 @@
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header"><div class="shell nav-layout">
     <a class="brand" href="index.html" aria-label="Daniil Lysenko, home">Daniil Lysenko<span class="brand-mark" aria-hidden="true">.</span></a>
-    <button class="menu-toggle" type="button" aria-controls="primary-nav" aria-expanded="false" aria-label="Open navigation"><span></span><span></span><span></span><span class="menu-word">Menu</span></button>
     <nav class="primary-nav" id="primary-nav" aria-label="Main navigation"><a href="index.html">Home</a>
 <a href="research.html" aria-current="page">Research</a>
 <a href="projects.html">Projects</a>
 <a href="about.html">About</a>
 <a href="cv.html">CV</a>
 <a href="contact.html">Contact</a></nav>
+    <div class="nav-actions"><button class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false" title="Change color theme"><span class="theme-glyph" aria-hidden="true">☾</span><span class="theme-word">Dark</span></button><button class="menu-toggle" type="button" aria-controls="primary-nav" aria-expanded="false" aria-label="Open navigation"><span></span><span></span><span></span><span class="menu-word">Menu</span></button></div>
   </div></header>
   <main id="main">
 
-<section class="page-hero shell"><p class="eyebrow">Research</p><h1>Research</h1><p class="page-intro">I work on observational and computational problems in astrophysics. The projects below distinguish what the analysis currently shows from questions still under investigation.</p></section>
+<section class="page-hero shell"><p class="eyebrow">Research</p><h1>Research</h1><p class="page-intro">I work on observational and computational problems in astrophysics. The main project is a spectroscopic study of quasar 4C 04.81; other work includes gamma-ray bursts, neutron stars, and computational electromagnetics.</p></section>
 <section class="shell research-stack">
   <article class="research-entry" id="quasar"><div class="entry-meta"><span class="number">01</span><span class="tag">Ioffe Institute · 2026–present</span></div><div class="entry-content">
     <h2>Quasar 4C 04.81: absorption and accretion-disk structure</h2>
@@ -37,7 +45,8 @@
     <p>For the proximate absorber at <i>z</i> ≈ 2.58, I analyze high-resolution VLT/UVES spectra with Python and SPECTRO to examine how the absorbing gas covers the quasar's emitting region. My work includes multi-transition Fe II fitting, component-specific partial-covering models, and tests of disk–absorber geometry.</p>
     <p>Fits to Fe II fine-structure transitions show <strong>excitation-dependent effective partial covering</strong>. In an 830-pixel joint full-profile test, the best completed component-specific model was favored over the best common-covering model by ΔBIC ≈ 122. Separately, continuum fitting gave a disk temperature-law exponent <i>β</i> = 0.571 ± 0.036, subject to continuum and reddening systematics.</p>
     <p class="fine-print">The Fe II data do not yet establish an independent wavelength-dependent covering law or a disk-temperature exponent inferred from absorption. Those questions require additional line-profile, geometry, and identifiability tests.</p>
-    <a href="projects.html#quasar-modeling" class="underlined-link">Analysis methods ↗</a>
+    <figure class="research-teaser"><a href="quasar.html#evidence"><img src="assets/qso/m0_m4_comparison.webp" width="2404" height="1375" loading="lazy" decoding="async" alt="Comparisons of observed Fe II absorption bottom fluxes with empirical covering models"></a><figcaption>Fe II bottom-flux measurements compared with candidate empirical covering laws.</figcaption></figure>
+    <a href="quasar.html" class="underlined-link">Quasar study: figures, methods, and limitations ↗</a>
   </div></article>
   <article class="research-entry" id="grb"><div class="entry-meta"><span class="number">02</span><span class="tag">Ioffe Institute · 2026–present</span></div><div class="entry-content">
     <h2>Gamma-ray burst timing and morphology</h2>

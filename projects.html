@@ -12,6 +12,14 @@
   <meta property="og:url" content="https://dlysenko05.github.io/projects.html">
   <link rel="canonical" href="https://dlysenko05.github.io/projects.html">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <script>
+(function () {
+  var preferred = null;
+  try { preferred = localStorage.getItem('daniil-site-theme'); } catch (e) {}
+  var systemDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  document.documentElement.setAttribute('data-theme', preferred === 'dark' || preferred === 'light' ? preferred : (systemDark ? 'dark' : 'light'));
+})();
+</script>
   <link rel="stylesheet" href="styles.css">
   <title>Projects · Daniil Lysenko</title>
 </head>
@@ -19,18 +27,19 @@
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header"><div class="shell nav-layout">
     <a class="brand" href="index.html" aria-label="Daniil Lysenko, home">Daniil Lysenko<span class="brand-mark" aria-hidden="true">.</span></a>
-    <button class="menu-toggle" type="button" aria-controls="primary-nav" aria-expanded="false" aria-label="Open navigation"><span></span><span></span><span></span><span class="menu-word">Menu</span></button>
     <nav class="primary-nav" id="primary-nav" aria-label="Main navigation"><a href="index.html">Home</a>
 <a href="research.html">Research</a>
 <a href="projects.html" aria-current="page">Projects</a>
 <a href="about.html">About</a>
 <a href="cv.html">CV</a>
 <a href="contact.html">Contact</a></nav>
+    <div class="nav-actions"><button class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false" title="Change color theme"><span class="theme-glyph" aria-hidden="true">☾</span><span class="theme-word">Dark</span></button><button class="menu-toggle" type="button" aria-controls="primary-nav" aria-expanded="false" aria-label="Open navigation"><span></span><span></span><span></span><span class="menu-word">Menu</span></button></div>
   </div></header>
   <main id="main">
 
 <section class="page-hero shell"><p class="eyebrow">Projects</p><h1>Selected projects</h1><p class="page-intro">Computational methods, models, and tests behind my research. The distinctions between a working calculation, a validation exercise, and an unresolved physical result matter here.</p></section>
 <section class="shell projects-list">
+  <div class="projects-lead"><p class="eyebrow">Main research project</p><h2>Quasar 4C 04.81</h2><p>See the VLT spectroscopy, Fe II covering measurements, model comparisons, and disk–absorber visualizations on the dedicated research page.</p><a class="underlined-link" href="quasar.html">Explore the quasar project ↗</a></div>
   <article class="project-feature" id="mhd"><div class="project-head"><span>01 / Numerical PDEs</span><span>Neutron-star magnetohydrodynamics</span></div><h2>Torsional resistive MHD in a spherical shell</h2><div class="project-columns"><div>
     <p class="body-large">A reduced numerical study of magnetic winding, Maxwell stress feedback, and resistive damping in a rotating spherical shell.</p>
     <p>The main evolution solver evolves a spatially resolved axisymmetric torsional PDE model. I investigated the competition between differential-rotation winding, Lorentz-force braking, and Ohmic dissipation. Related kinematic Dedalus calculations examined magnetic-field evolution in spherical geometries.</p>
