@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#faf9f6">
+  <meta name="description" content="Computational astrophysics and physics projects by Daniil Lysenko: MHD, quasar spectroscopy, GRB timing and metasurfaces.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Daniil Lysenko">
+  <meta property="og:title" content="Projects · Daniil Lysenko">
+  <meta property="og:description" content="Computational astrophysics and physics projects by Daniil Lysenko: MHD, quasar spectroscopy, GRB timing and metasurfaces.">
+  <meta property="og:url" content="https://dlysenko05.github.io/projects.html">
+  <link rel="canonical" href="https://dlysenko05.github.io/projects.html">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="styles.css">
+  <title>Projects · Daniil Lysenko</title>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header"><div class="shell nav-layout">
+    <a class="brand" href="index.html" aria-label="Daniil Lysenko, home">Daniil Lysenko<span class="brand-mark" aria-hidden="true">.</span></a>
+    <button class="menu-toggle" type="button" aria-controls="primary-nav" aria-expanded="false" aria-label="Open navigation"><span></span><span></span><span></span><span class="menu-word">Menu</span></button>
+    <nav class="primary-nav" id="primary-nav" aria-label="Main navigation"><a href="index.html">Home</a>
+<a href="research.html">Research</a>
+<a href="projects.html" aria-current="page">Projects</a>
+<a href="about.html">About</a>
+<a href="cv.html">CV</a>
+<a href="contact.html">Contact</a></nav>
+  </div></header>
+  <main id="main">
+
+<section class="page-hero shell"><p class="eyebrow">Projects</p><h1>Selected projects</h1><p class="page-intro">Computational methods, models, and tests behind my research. The distinctions between a working calculation, a validation exercise, and an unresolved physical result matter here.</p></section>
+<section class="shell projects-list">
+  <article class="project-feature" id="mhd"><div class="project-head"><span>01 / Numerical PDEs</span><span>Neutron-star magnetohydrodynamics</span></div><h2>Torsional resistive MHD in a spherical shell</h2><div class="project-columns"><div>
+    <p class="body-large">A reduced numerical study of magnetic winding, Maxwell stress feedback, and resistive damping in a rotating spherical shell.</p>
+    <p>The main evolution solver evolves a spatially resolved axisymmetric torsional PDE model. I investigated the competition between differential-rotation winding, Lorentz-force braking, and Ohmic dissipation. Related kinematic Dedalus calculations examined magnetic-field evolution in spherical geometries.</p>
+    <p>The torsional production model is deliberately reduced: it is not a complete three-dimensional, incompressible vector-MHD simulation in Dedalus.</p>
+  </div><aside class="project-details"><h3>Methods</h3><p>PDE evolution, spectral and spherical-geometry calculations</p><h3>Physical effects</h3><p>Winding · Maxwell feedback · Ohmic diffusion</p><h3>Scope</h3><p>Reduced torsional model, not a full vector-MHD production solve</p></aside></div></article>
+  <article class="project-feature" id="quasar-modeling"><div class="project-head"><span>02 / Spectroscopic modeling</span><span>Quasar 4C 04.81</span></div><h2>Fe II partial-covering models</h2><div class="project-columns"><div>
+    <p class="body-large">Fitting absorption profiles while testing which properties of the gas and source geometry are actually identifiable.</p>
+    <p>I extended SPECTRO analyses with homogeneous and inhomogeneous covering prescriptions, compared common and component-specific absorber topologies using AIC/BIC, and ran line-quality, profile-likelihood, and line-spread-function checks.</p>
+    <p>Excitation-dependent effective covering is supported in the present Fe II sample. A separate chromatic covering trend remains ambiguous, and absorption alone does not determine the disk temperature profile without assumptions about the spatial arrangement of absorbing gas.</p>
+  </div><aside class="project-details"><h3>Data</h3><p>VLT/UVES spectra · Fe II / Fe II* transitions</p><h3>Tools</h3><p>Python · SPECTRO · profile likelihoods · model comparisons</p><h3>Open issue</h3><p>Disk–absorber geometry and wavelength dependence</p></aside></div></article>
+  <article class="project-feature" id="grb-computation"><div class="project-head"><span>03 / Bayesian computation</span><span>Gamma-ray bursts</span></div><h2>GRB light-curve reconstruction</h2><div class="project-columns"><div>
+    <p class="body-large">A Poisson-count inference pipeline for reconstructing gamma-ray burst temporal structure using random Fourier features.</p>
+    <p>The workflow uses Stan and CmdStanPy to fit count data with background estimates, posterior predictive checks, and model/sampler diagnostics. After synthetic pulse tests, I adapted it to Fermi/GBM time-tagged events and compared fits for GRB 200826A across detectors and temporal resolutions.</p>
+    <p>Broad pulse timing is reproducible in the tested data. Background tails, differences between detectors, and fine-scale pulse morphology are still being calibrated.</p>
+  </div><aside class="project-details"><h3>Likelihood</h3><p>Exposure-aware Poisson detector counts</p><h3>Model</h3><p>Multiscale random Fourier features</p><h3>Tools</h3><p>Python · Stan/CmdStanPy · GDT · FITS</p></aside></div></article>
+  <article class="project-feature" id="metasurface"><div class="project-head"><span>04 / Computational electromagnetics</span><span>ITMO University</span></div><h2>5 GHz dielectric metasurface</h2><div class="project-columns"><div>
+    <p class="body-large">Designing a high-transmission meta-atom library and building finite-aperture models for beam steering and focusing.</p>
+    <p>A COMSOL sweep yielded 43 radius choices with transmission ≥ 0.9. I generated a 377-element radial aperture, then compared Lumerical FDTD far-field and LightPipes scalar propagation estimates.</p>
+    <p>The 20° beam deflector agreed closely with its target (20.49° in FDTD; 19.71° in LightPipes). The 100 mm metalens target is not equally settled: different propagation models produced significantly different axial maxima.</p>
+  </div><aside class="project-details"><h3>Structure</h3><p>Three-layer all-dielectric unit cell · 5 GHz</p><h3>Computing</h3><p>COMSOL · Lumerical FDTD · LightPipes · Python</p><h3>Status</h3><p>Beam steering validated in simulations; focusing comparison unresolved</p></aside></div></article>
+</section>
+<section class="shell code-note"><div><p class="eyebrow">Code</p><h2>GitHub</h2></div><div><p>My public programming work is on GitHub. Not all research code or work in progress is publicly released.</p><a href="https://github.com/dlysenko05" target="_blank" rel="noopener me" class="underlined-link">github.com/dlysenko05 ↗</a></div></section>
+
+  </main>
+  <footer class="site-footer"><div class="shell footer-layout">
+    <span>© <span data-current-year>2026</span> Daniil Lysenko</span>
+    <div class="footer-right"><a href="mailto:daniil.lysenko5002@gmail.com">Email</a><span class="footer-separator" aria-hidden="true">/</span><a href="https://github.com/dlysenko05" rel="me noopener" target="_blank">GitHub ↗</a><span class="footer-separator" aria-hidden="true">/</span><a href="cv.html">CV</a></div>
+  </div></footer>
+  <script src="site.js" defer></script>
+</body>
+</html>

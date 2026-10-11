@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#faf9f6">
+  <meta name="description" content="Current and recent research by Daniil Lysenko: quasar absorption, gamma-ray bursts, neutron-star physics and dielectric metasurfaces.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Daniil Lysenko">
+  <meta property="og:title" content="Research · Daniil Lysenko">
+  <meta property="og:description" content="Current and recent research by Daniil Lysenko: quasar absorption, gamma-ray bursts, neutron-star physics and dielectric metasurfaces.">
+  <meta property="og:url" content="https://dlysenko05.github.io/research.html">
+  <link rel="canonical" href="https://dlysenko05.github.io/research.html">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="styles.css">
+  <title>Research · Daniil Lysenko</title>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header"><div class="shell nav-layout">
+    <a class="brand" href="index.html" aria-label="Daniil Lysenko, home">Daniil Lysenko<span class="brand-mark" aria-hidden="true">.</span></a>
+    <button class="menu-toggle" type="button" aria-controls="primary-nav" aria-expanded="false" aria-label="Open navigation"><span></span><span></span><span></span><span class="menu-word">Menu</span></button>
+    <nav class="primary-nav" id="primary-nav" aria-label="Main navigation"><a href="index.html">Home</a>
+<a href="research.html" aria-current="page">Research</a>
+<a href="projects.html">Projects</a>
+<a href="about.html">About</a>
+<a href="cv.html">CV</a>
+<a href="contact.html">Contact</a></nav>
+  </div></header>
+  <main id="main">
+
+<section class="page-hero shell"><p class="eyebrow">Research</p><h1>Research</h1><p class="page-intro">I work on observational and computational problems in astrophysics. The projects below distinguish what the analysis currently shows from questions still under investigation.</p></section>
+<section class="shell research-stack">
+  <article class="research-entry" id="quasar"><div class="entry-meta"><span class="number">01</span><span class="tag">Ioffe Institute · 2026–present</span></div><div class="entry-content">
+    <h2>Quasar 4C 04.81: absorption and accretion-disk structure</h2>
+    <p class="affiliation">With Dr. Sergei Balashev</p>
+    <p>For the proximate absorber at <i>z</i> ≈ 2.58, I analyze high-resolution VLT/UVES spectra with Python and SPECTRO to examine how the absorbing gas covers the quasar's emitting region. My work includes multi-transition Fe II fitting, component-specific partial-covering models, and tests of disk–absorber geometry.</p>
+    <p>Fits to Fe II fine-structure transitions show <strong>excitation-dependent effective partial covering</strong>. In an 830-pixel joint full-profile test, the best completed component-specific model was favored over the best common-covering model by ΔBIC ≈ 122. Separately, continuum fitting gave a disk temperature-law exponent <i>β</i> = 0.571 ± 0.036, subject to continuum and reddening systematics.</p>
+    <p class="fine-print">The Fe II data do not yet establish an independent wavelength-dependent covering law or a disk-temperature exponent inferred from absorption. Those questions require additional line-profile, geometry, and identifiability tests.</p>
+    <a href="projects.html#quasar-modeling" class="underlined-link">Analysis methods ↗</a>
+  </div></article>
+  <article class="research-entry" id="grb"><div class="entry-meta"><span class="number">02</span><span class="tag">Ioffe Institute · 2026–present</span></div><div class="entry-content">
+    <h2>Gamma-ray burst timing and morphology</h2>
+    <p class="affiliation">With Dr. Dmitry Svinkin</p>
+    <p>I am rebuilding and testing a Bayesian random-Fourier-feature model for GRB light curves, using Poisson count likelihoods and Stan/CmdStanPy. The aim is to characterize burst duration and pulse structure while keeping track of background and model uncertainty.</p>
+    <p>On Fermi/GBM data for GRB 200826A, the pipeline recovers the dominant pulse across several detectors and 16–64 ms time bins. For the strongest detector, the model's source-only finite-window duration is around 0.9–1.0 seconds. Synthetic tests also demonstrated a prototype for inter-detector time-delay estimation.</p>
+    <p class="fine-print">The fitted duration is not interchangeable with the published catalog T90. A longer inferred tail in one detector and the reliability of fine-scale substructure remain under validation; this is not yet a multi-burst population result.</p>
+    <a href="projects.html#grb-computation" class="underlined-link">Statistical pipeline ↗</a>
+  </div></article>
+  <article class="research-entry" id="neutron-stars"><div class="entry-meta"><span class="number">03</span><span class="tag">Ioffe Institute · 2024–2026</span></div><div class="entry-content">
+    <h2>Neutron-star structure and magnetic-field evolution</h2>
+    <p class="affiliation">With Dr. Mikhail Gusakov</p>
+    <p>I implemented relativistic equations of state and six numerical solvers for the Tolman–Oppenheimer–Volkoff equations. With the BSk24 equation of state, the calculations recovered a maximum mass of 2.28 solar masses.</p>
+    <p>In related magnetic-field studies, I used kinematic winding calculations in spherical geometries and reduced models to explore toroidal-field growth, Ohmic diffusion, and the braking of differential rotation through torsional magnetic feedback.</p>
+    <p class="fine-print">The focused torsional resistive-MHD project is a reduced spatially resolved PDE study; it is not a full vector-MHD production simulation.</p>
+    <a href="projects.html#mhd" class="underlined-link">Numerical study ↗</a>
+  </div></article>
+  <article class="research-entry" id="metasurfaces"><div class="entry-meta"><span class="number">04</span><span class="tag">ITMO University · 2026–present</span></div><div class="entry-content">
+    <h2>Dielectric metasurfaces at microwave frequencies</h2>
+    <p class="affiliation">With Dr. Alexander Solomonov</p>
+    <p>At the ITMO Metamaterials Laboratory I designed and simulated a 5 GHz, three-layer dielectric meta-atom and used the resulting phase library to construct a 377-element beam deflector and metalens. The workflow combines COMSOL, Python-driven Lumerical FDTD, and LightPipes.</p>
+    <p>For a 20° deflection target, full-wave and scalar models yielded 20.49° and 19.71°, respectively. The metalens models disagreed on the focal position, which remains an unresolved modeling question rather than a confirmed focusing result.</p>
+    <a href="projects.html#metasurface" class="underlined-link">Simulation details ↗</a>
+  </div></article>
+</section>
+<section class="shell research-addendum"><div><p class="eyebrow">Observational experience</p><h2>SAO RAS practicum</h2></div><div><p>In July 2026 I reduced RATAN-600 measurements and astronomical FITS data, identified the host of a giant radio source using VizieR, TOPCAT, and Aladin, and participated in a BTA 6-m telescope observing session.</p><p>An additional research project with Alexander Vinokurov at SAO RAS is developing; I will describe it here when its scope and results are ready.</p></div></section>
+<section class="next-section shell"><span>Next</span><a href="projects.html">Computational projects <span aria-hidden="true">↗</span></a></section>
+
+  </main>
+  <footer class="site-footer"><div class="shell footer-layout">
+    <span>© <span data-current-year>2026</span> Daniil Lysenko</span>
+    <div class="footer-right"><a href="mailto:daniil.lysenko5002@gmail.com">Email</a><span class="footer-separator" aria-hidden="true">/</span><a href="https://github.com/dlysenko05" rel="me noopener" target="_blank">GitHub ↗</a><span class="footer-separator" aria-hidden="true">/</span><a href="cv.html">CV</a></div>
+  </div></footer>
+  <script src="site.js" defer></script>
+</body>
+</html>
