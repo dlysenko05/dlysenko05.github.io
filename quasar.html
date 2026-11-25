@@ -4,92 +4,203 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#faf9f6">
-  <meta name="description" content="Quasar 4C 04.81: Fe II partial covering, spectroscopy, model comparisons and disk–absorber visualizations.">
+  <meta name="description" content="Quasar absorption spectroscopy with VLT/UVES and X-Shooter, Fe II partial covering and limits on disk temperature inference.">
+  <link rel="canonical" href="https://dlysenko05.github.io/quasar.html">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Daniil Lysenko">
-  <meta property="og:title" content="Quasar 4C 04.81 · Daniil Lysenko">
-  <meta property="og:description" content="Quasar 4C 04.81: Fe II partial covering, spectroscopy, model comparisons and disk–absorber visualizations.">
+  <meta property="og:title" content="Quasar 4C 04.81">
+  <meta property="og:description" content="Quasar absorption spectroscopy with VLT/UVES and X-Shooter, Fe II partial covering and limits on disk temperature inference.">
   <meta property="og:url" content="https://dlysenko05.github.io/quasar.html">
-  <link rel="canonical" href="https://dlysenko05.github.io/quasar.html">
-  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-  <script>
-(function () {
-  var preferred = null;
-  try { preferred = localStorage.getItem('daniil-site-theme'); } catch (e) {}
-  var systemDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-  document.documentElement.setAttribute('data-theme', preferred === 'dark' || preferred === 'light' ? preferred : (systemDark ? 'dark' : 'light'));
-})();
-</script>
-  <link rel="stylesheet" href="styles.css">
   <title>Quasar 4C 04.81 · Daniil Lysenko</title>
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+  <script src="/site.js"></script>
+  <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header"><div class="shell nav-layout">
-    <a class="brand" href="index.html" aria-label="Daniil Lysenko, home">Daniil Lysenko<span class="brand-mark" aria-hidden="true">.</span></a>
-    <nav class="primary-nav" id="primary-nav" aria-label="Main navigation"><a href="index.html">Home</a>
-<a href="research.html" aria-current="page">Research</a>
-<a href="projects.html">Projects</a>
-<a href="about.html">About</a>
-<a href="cv.html">CV</a>
-<a href="contact.html">Contact</a></nav>
-    <div class="nav-actions"><button class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false" title="Change color theme"><span class="theme-glyph" aria-hidden="true">☾</span><span class="theme-word">Dark</span></button><button class="menu-toggle" type="button" aria-controls="primary-nav" aria-expanded="false" aria-label="Open navigation"><span></span><span></span><span></span><span class="menu-word">Menu</span></button></div>
+    <a class="brand" href="/" aria-label="Daniil Lysenko, home">Daniil Lysenko<span class="brand-mark" aria-hidden="true">.</span></a>
+    <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
+      <a href="/">Home</a>
+      <a href="/research.html" aria-current="location">Research</a>
+      <a href="/about.html">About</a>
+      <a href="/cv.html">CV</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="theme-toggle" type="button" aria-label="Switch to dark theme"><span class="theme-glyph" aria-hidden="true">☾</span><span class="theme-word">Dark</span></button>
+      <button class="menu-toggle" type="button" aria-controls="primary-nav" aria-expanded="false" aria-label="Open navigation"><span></span><span></span><span></span><span class="menu-word">Menu</span></button>
+    </div>
   </div></header>
-  <main id="main">
-<section class="page-hero shell project-title-hero"><p class="eyebrow">Main research · Ioffe Institute · with Dr. Sergei Balashev</p><h1>Quasar 4C 04.81</h1><p class="page-intro">Partial covering, Fe II excitation, and the limits of what absorption can reveal about an accretion disk.</p><div class="project-meta-strip"><span>High-resolution VLT/UVES spectra</span><span>Proximate absorber: <i>z</i> ≈ 2.58</span><span>2026–present</span></div></section>
-<section class="shell qso-intro" id="overview"><div><p class="eyebrow">The question</p><h2>Can an absorber reveal the structure of the source behind it?</h2></div><div><p>The quasar's light passes through structured gas, leaving absorption lines whose depths depend on both optical depth and the fraction of the emitting region covered. I fit these lines with Python and SPECTRO and test whether the inferred covering fractions reflect the gas's excitation, the source wavelength, or both.</p><p>The important distinction is between a measurement of effective covering and a reconstructed physical geometry. The quasar and absorber are not spatially resolved by these observations.</p></div></section>
-<section class="qso-band section" id="evidence"><div class="shell"><p class="eyebrow">01 / Spectroscopic evidence</p><h2 class="qso-section-title">The Fe II absorption lines</h2><p class="qso-section-intro">Across the well-constrained Fe II fine-structure levels <i>j</i> = 0–5, the inferred effective covering fraction decreases with excitation index. Fits to selected joint profiles also favor treating the absorbing components separately.</p>
-<div class="science-gallery two-up"><figure class="science-figure">
- <a class="image-open" href="assets/qso/covering_excitation.webp" target="_blank" rel="noopener" aria-label="Open full image: Fe II covering factor versus excitation"><img src="assets/qso/covering_excitation.webp" width="1037" height="684" alt="Excitation-index dependence of inferred covering factors" loading="lazy" decoding="async"></a>
- <figcaption><strong>Fe II covering factor versus excitation</strong><span>Covering-fraction estimates for the well-constrained Fe II levels; trend is excitation-dependent.</span><a href="assets/qso/covering_excitation.webp" target="_blank" rel="noopener">Open figure ↗</a></figcaption>
- </figure><figure class="science-figure">
- <a class="image-open" href="assets/qso/m0_m4_comparison.webp" target="_blank" rel="noopener" aria-label="Open full image: M0–M4 empirical covering models"><img src="assets/qso/m0_m4_comparison.webp" width="2404" height="1375" alt="Combined observed-versus-predicted BF comparison for five covering laws." loading="lazy" decoding="async"></a>
- <figcaption><strong>M0–M4 empirical covering models</strong><span>Observed versus predicted bottom flux for five empirical covering prescriptions.</span><a href="assets/qso/m0_m4_comparison.webp" target="_blank" rel="noopener">Open figure ↗</a></figcaption>
- </figure><figure class="science-figure">
- <a class="image-open" href="assets/qso/bf_covering_profiles.webp" target="_blank" rel="noopener" aria-label="Open full image: Covering-factor likelihood profiles"><img src="assets/qso/bf_covering_profiles.webp" width="2161" height="767" alt="Profile likelihood for each Fe II excitation level" loading="lazy" decoding="async"></a>
- <figcaption><strong>Covering-factor likelihood profiles</strong><span>Profile-likelihood constraints on effective covering, level by level.</span><a href="assets/qso/bf_covering_profiles.webp" target="_blank" rel="noopener">Open figure ↗</a></figcaption>
- </figure><figure class="science-figure">
- <a class="image-open" href="assets/qso/line_windows_j5.webp" target="_blank" rel="noopener" aria-label="Open full image: Observed line windows — j5"><img src="assets/qso/line_windows_j5.webp" width="2399" height="852" alt="Observed line windows j0–j8" loading="lazy" decoding="async"></a>
- <figcaption><strong>Observed line windows — j5</strong><span>Selected j5 spectral windows; line quality and instrumental convolution matter.</span><a href="assets/qso/line_windows_j5.webp" target="_blank" rel="noopener">Open figure ↗</a></figcaption>
- </figure></div>
-<p class="interpretation-note"><strong>What the fits establish:</strong> excitation-dependent effective partial covering. <strong>What they do not yet establish:</strong> an independent wavelength-dependent Fe II covering law.</p></div></section>
-<section class="section shell" id="models"><p class="eyebrow">02 / Model checks</p><h2 class="qso-section-title">Testing the interpretation</h2><p class="qso-section-intro">The fit is only useful if it remains identifiable under alternate covering laws, line choices, and instrument effects. The charts below document part of that scrutiny; their numbers remain conditional on the adopted likelihood and line sample.</p>
-<div class="science-gallery two-up"><figure class="science-figure">
- <a class="image-open" href="assets/qso/chromatic_slope_profile.webp" target="_blank" rel="noopener" aria-label="Open full image: Chromatic-slope likelihood profile"><img src="assets/qso/chromatic_slope_profile.webp" width="2025" height="716" alt="Profile-likelihood comparison with and without j5" loading="lazy" decoding="async"></a>
- <figcaption><strong>Chromatic-slope likelihood profile</strong><span>The putative common wavelength slope weakens when the j5 sample is excluded.</span><a href="assets/qso/chromatic_slope_profile.webp" target="_blank" rel="noopener">Open figure ↗</a></figcaption>
- </figure><figure class="science-figure">
- <a class="image-open" href="assets/qso/within_level_chromaticity.webp" target="_blank" rel="noopener" aria-label="Open full image: Chromaticity within Fe II levels"><img src="assets/qso/within_level_chromaticity.webp" width="1974" height="750" alt="Tests for chromatic covering slopes separately within levels" loading="lazy" decoding="async"></a>
- <figcaption><strong>Chromaticity within Fe II levels</strong><span>Same-level comparisons test whether the chromatic trend survives control for excitation.</span><a href="assets/qso/within_level_chromaticity.webp" target="_blank" rel="noopener">Open figure ↗</a></figcaption>
- </figure><figure class="science-figure">
- <a class="image-open" href="assets/qso/weighted_bf_contours.webp" target="_blank" rel="noopener" aria-label="Open full image: Fe II statistical-weight-scaled contours"><img src="assets/qso/weighted_bf_contours.webp" width="3279" height="1882" alt="BF likelihood contours shown in excitation-normalized column-density coordinates." loading="lazy" decoding="async"></a>
- <figcaption><strong>Fe II statistical-weight-scaled contours</strong><span>Likelihood contours illustrate column-density/covering degeneracies under statistical-weight scaling.</span><a href="assets/qso/weighted_bf_contours.webp" target="_blank" rel="noopener">Open figure ↗</a></figcaption>
- </figure><figure class="science-figure">
- <a class="image-open" href="assets/qso/lsf_instrumental_bias.webp" target="_blank" rel="noopener" aria-label="Open full image: Instrumental resolution and line minima"><img src="assets/qso/lsf_instrumental_bias.webp" width="1957" height="733" alt="Synthetic LSF convolution effects on bottom flux and equivalent width" loading="lazy" decoding="async"></a>
- <figcaption><strong>Instrumental resolution and line minima</strong><span>Line-spread-function convolution can bias shallow line-minimum estimates.</span><a href="assets/qso/lsf_instrumental_bias.webp" target="_blank" rel="noopener">Open figure ↗</a></figcaption>
- </figure></div>
-<p class="interpretation-note">In an 830-pixel joint Fe II/Fe II* profile fit, the best completed component-specific covering model improved on the best shared-covering solution by ΔBIC ≈ 122. The continuum-based disk temperature exponent <i>β</i> = 0.571 ± 0.036 was obtained separately; it should not be attributed to the absorption-line fit.</p></section>
-<section class="qso-band section" id="geometry"><div class="shell"><p class="eyebrow">03 / Spatial forward models</p><h2 class="qso-section-title">Disk and absorber geometry</h2><p class="qso-section-intro">Numerical disk-brightness maps test how an offset or stratified screen would change effective covering at different wavelengths. They are illustrative forward models—not directly observed maps or a unique 3D reconstruction.</p>
-<div class="science-gallery two-up"><figure class="science-figure science-figure-wide">
- <a class="image-open" href="assets/qso/disk_projection_wavelengths.webp" target="_blank" rel="noopener" aria-label="Open full image: Projected accretion disk at three wavelengths"><img src="assets/qso/disk_projection_wavelengths.webp" width="4197" height="1371" alt="Calculated disk brightness with fitted offset j0/j3/j5 absorbing-zone boundaries." loading="lazy" decoding="async"></a>
- <figcaption><strong>Projected accretion disk at three wavelengths</strong><span>Model-calculated source brightness and example projected absorbing-zone outlines at three wavelengths.</span><a href="assets/qso/disk_projection_wavelengths.webp" target="_blank" rel="noopener">Open figure ↗</a></figcaption>
- </figure><figure class="science-figure">
- <a class="image-open" href="assets/qso/geometry_covering_chromatic.webp" target="_blank" rel="noopener" aria-label="Open full image: Geometrical covering fraction vs wavelength"><img src="assets/qso/geometry_covering_chromatic.webp" width="3890" height="1436" alt="Calculated covering factors for centered and offset circular-screen geometries." loading="lazy" decoding="async"></a>
- <figcaption><strong>Geometrical covering fraction vs wavelength</strong><span>Wavelength-dependent covering predicted for centered and offset circular-screen geometries.</span><a href="assets/qso/geometry_covering_chromatic.webp" target="_blank" rel="noopener">Open figure ↗</a></figcaption>
- </figure><figure class="science-figure">
- <a class="image-open" href="assets/qso/empirical_vs_geometry.webp" target="_blank" rel="noopener" aria-label="Open full image: Empirical M4 vs geometric covering"><img src="assets/qso/empirical_vs_geometry.webp" width="2081" height="778" alt="Model-predicted chromatic covering illustrates tension between empirical and circular-screen models." loading="lazy" decoding="async"></a>
- <figcaption><strong>Empirical M4 vs geometric covering</strong><span>Comparison that exposes tension between empirical covering trends and simple circular-screen predictions.</span><a href="assets/qso/empirical_vs_geometry.webp" target="_blank" rel="noopener">Open figure ↗</a></figcaption>
- </figure><figure class="science-figure">
- <a class="image-open" href="assets/qso/disk_absorber_3d.webp" target="_blank" rel="noopener" aria-label="Open full image: 3D disk–absorber geometry"><img src="assets/qso/disk_absorber_3d.webp" width="2144" height="2111" alt="Projected numerical geometry rendered in 3D; line-of-sight separation is schematic." loading="lazy" decoding="async"></a>
- <figcaption><strong>3D disk–absorber geometry</strong><span>A numerical projected geometry in a schematic 3D view; line-of-sight distance is not measured.</span><a href="assets/qso/disk_absorber_3d.webp" target="_blank" rel="noopener">Open figure ↗</a></figcaption>
- </figure></div>
-<div class="qso-interactive"><div><p class="eyebrow">Interactive visualization</p><h3>Explore the disk–absorber model in 3D</h3><p>Optional self-contained interactive view of the numerical geometry. Its depth and absorbing-zone shapes are model assumptions, not a spatial reconstruction from the spectrum.</p></div><a class="button" href="interactive/disk_absorber_interactive.html" target="_blank" rel="noopener">Open 3D model ↗</a></div>
+  <main id="main" tabindex="-1">
+<section class="page-hero shell detail-title">
+  <p class="breadcrumb"><a href="/research.html">← Research</a></p>
+  <h1>Quasar 4C 04.81</h1>
+  <p class="page-intro">I use absorption lines to study the gas in front of the quasar and ask what they can tell us about the emitting region behind it.</p>
+  <ul class="project-meta-strip"><li>Ioffe Institute</li><li>With Dr. Sergei Balashev</li><li>Apr. 2026–present</li></ul>
+</section>
+<nav class="shell section-links" aria-label="Quasar study sections">
+  <a href="#overview">Observations</a><a href="#evidence">Fe II results</a>
+  <a href="#models">Excitation and density</a><a href="#geometry">Disk models</a><a href="#next-steps">Ongoing work</a>
+</nav>
+<section class="shell qso-intro" id="overview">
+  <h2>What the spectra measure</h2>
+  <div class="section-copy">
+    <p>Gas at redshift <i>z</i> ≈ 2.58 absorbs light from 4C 04.81. I analyze VLT/UVES and X-Shooter spectra to study partial covering. If the gas covers only part of the emitting region, even a strongly absorbed line can retain flux from the uncovered part.</p>
+    <p>I extended SPECTRO to fit homogeneous and inhomogeneous partial-covering models. I also developed a bottom-flux module and analyzed 36 singly ionized iron (Fe II) transitions from six lower levels. The residual flux at the line minima constrains effective covering, while joint fits to the full profiles use information across pixels.</p>
+  </div>
+</section>
+<section class="qso-band section" id="evidence"><div class="shell">
+  <h2 class="qso-section-title">Fe II covering and joint fits</h2>
+  <div class="section-copy">
+    <p>The nominal excitation-dependent covering trend was 4.3σ. It weakened to about 2σ after I excluded two influential transitions overlapping broad quasar emission. The strength of the trend therefore depends on which lines enter the fit.</p>
+    <p>A separate joint fit of Fe II and excited Fe II over 830 spectral pixels favored separate inhomogeneous absorber screens with an uncovered fraction over a common screen (ΔBIC ≈ 122). This is a preference between the tested model families. Several physical arrangements could produce similar absorption profiles.</p>
+  </div>
+  <div class="science-gallery two-up">
+<figure class="science-figure">
+  <div class="figure-image"><img src="/assets/qso/covering_excitation.webp" width="1037" height="684" alt="Six Fe II covering estimates with uncertainties and a downward fitted trend." loading="lazy" decoding="async"></div>
+  <figcaption>
+    <strong>Effective covering by excitation level</strong>
+    <span>The working sample shows a nominal 4.3σ trend. Excluding two transitions that overlap broad emission weakens it to about 2σ.</span>
+    <a href="/assets/qso/covering_excitation.webp">Full-size image<span class="sr-only"> · Effective covering by excitation level</span></a>
+  </figcaption>
+</figure>
+<figure class="science-figure">
+  <div class="figure-image"><img src="/assets/qso/line_windows_j5.webp" width="2399" height="852" alt="Eight normalized-flux profiles around transitions from the j = 5 lower level, including clear and blended windows." loading="lazy" decoding="async"></div>
+  <figcaption>
+    <strong>Spectral windows for Fe II <i>j</i> = 5</strong>
+    <span>The shaded intervals mark the line windows. Blends and broad quasar emission can affect measurements of the line minima.</span>
+    <a href="/assets/qso/line_windows_j5.webp">Full-size image<span class="sr-only"> · Spectral windows for Fe II <i>j</i> = 5</span></a>
+  </figcaption>
+</figure>
+</div>
+  <details class="science-details"><summary>Bottom-flux model comparisons</summary>
+<div class="science-gallery two-up">
+<figure class="science-figure">
+  <div class="figure-image"><img src="/assets/qso/m0_m4_comparison.webp" width="2404" height="1375" alt="Observed and predicted absorption-line minima for five covering prescriptions, with model residuals." loading="lazy" decoding="async"></div>
+  <figcaption>
+    <strong>Bottom-flux model comparison</strong>
+    <span>These panels compare empirical fits to the line minima. The 830-pixel joint profile comparison described above is a separate test.</span>
+    <a href="/assets/qso/m0_m4_comparison.webp">Full-size image<span class="sr-only"> · Bottom-flux model comparison</span></a>
+  </figcaption>
+</figure>
+<figure class="science-figure">
+  <div class="figure-image"><img src="/assets/qso/bf_covering_profiles.webp" width="2161" height="767" alt="Likelihood curves for effective covering across Fe II lower levels, with constraints that vary in width." loading="lazy" decoding="async"></div>
+  <figcaption>
+    <strong>Covering likelihoods by level</strong>
+    <span>The profile likelihoods show how tightly the residual flux constrains covering for each level.</span>
+    <a href="/assets/qso/bf_covering_profiles.webp">Full-size image<span class="sr-only"> · Covering likelihoods by level</span></a>
+  </figcaption>
+</figure>
+</div>
+</details>
 </div></section>
-<section class="shell qso-conclusion"><div><p class="eyebrow">Current conclusion</p><h2>What comes next</h2></div><div><p>The next tests compare widely separated transitions sharing the same lower level, account for instrumental line spreading and blending, and link Fe II population calculations to the measured likelihoods. The radial opacity distribution and the disk temperature slope remain degenerate without additional assumptions or independent chromatic constraints.</p><p><strong>Status:</strong> ongoing research. These are working results and numerical demonstrations, not a published measurement of the quasar's spatial structure.</p><a href="research.html" class="underlined-link">Other research ↗</a><a href="cv.html" class="underlined-link">Curriculum vitae ↗</a></div></section>
-</main>
+<section class="shell section" id="models">
+  <h2 class="qso-section-title">Excitation, density and wavelength</h2>
+  <div class="section-copy">
+    <p>The Fe II level populations describe the excitation of the gas. I use statistical-equilibrium calculations with CHIANTI atomic data to explore how the populations depend on physical conditions such as electron density. Density inference depends on the excitation model. Effective covering also depends on how the gas is distributed across the emitting region.</p>
+    <p>To look for wavelength-dependent covering, I compare transitions from the same lower level and check the sensitivity to line selection and instrumental broadening. The Fe II data leave a common wavelength slope uncertain.</p>
+  </div>
+  <details class="science-details"><summary>Excitation and instrumental checks</summary>
+<div class="science-gallery two-up">
+<figure class="science-figure">
+  <div class="figure-image"><img src="/assets/qso/chromatic_slope_profile.webp" width="2025" height="716" alt="Profile likelihoods and intervals for a wavelength slope using levels j = 0–5 and j = 0–4." loading="lazy" decoding="async"></div>
+  <figcaption>
+    <strong>Sensitivity of the common wavelength slope</strong>
+    <span>Removing the highest included lower level weakens the constraint on the slope shared across excitation levels.</span>
+    <a href="/assets/qso/chromatic_slope_profile.webp">Full-size image<span class="sr-only"> · Sensitivity of the common wavelength slope</span></a>
+  </figcaption>
+</figure>
+<figure class="science-figure">
+  <div class="figure-image"><img src="/assets/qso/within_level_chromaticity.webp" width="1974" height="750" alt="Estimated slopes with uncertainties for six Fe II levels and their model comparison scores." loading="lazy" decoding="async"></div>
+  <figcaption>
+    <strong>Wavelength slopes within individual levels</strong>
+    <span>Comparing transitions from the same lower level helps distinguish a wavelength trend from differences in excitation.</span>
+    <a href="/assets/qso/within_level_chromaticity.webp">Full-size image<span class="sr-only"> · Wavelength slopes within individual levels</span></a>
+  </figcaption>
+</figure>
+<figure class="science-figure">
+  <div class="figure-image"><img src="/assets/qso/weighted_bf_contours.webp" width="3279" height="1882" alt="Six panels of likelihood contours over statistical-weight-scaled Fe II column density and effective covering." loading="lazy" decoding="async"></div>
+  <figcaption>
+    <strong>Column density and covering</strong>
+    <span>Each panel shows how column density and covering trade off in a fit to the line minima for one lower level.</span>
+    <a href="/assets/qso/weighted_bf_contours.webp">Full-size image<span class="sr-only"> · Column density and covering</span></a>
+  </figcaption>
+</figure>
+<figure class="science-figure">
+  <div class="figure-image"><img src="/assets/qso/lsf_instrumental_bias.webp" width="1957" height="733" alt="Synthetic examples in which convolution changes the line minimum and leaves equivalent width nearly unchanged." loading="lazy" decoding="async"></div>
+  <figcaption>
+    <strong>Effect of instrumental broadening</strong>
+    <span>Finite spectral resolution can make a line shallower even when its integrated absorption changes little.</span>
+    <a href="/assets/qso/lsf_instrumental_bias.webp">Full-size image<span class="sr-only"> · Effect of instrumental broadening</span></a>
+  </figcaption>
+</figure>
+</div>
+</details>
+</section>
+<section class="qso-band section" id="geometry"><div class="shell">
+  <h2 class="qso-section-title">Disk temperature and absorber geometry</h2>
+  <div class="section-copy">
+    <p>I model how different absorbing screens would cover an accretion disk whose brightness changes with wavelength. An offset screen and a change in the disk’s radial temperature profile can both change the covered flux. Under the tested opacity model, the absorption left the disk temperature exponent β poorly constrained over 0.2–1.5.</p>
+    <p>The figures below show illustrative forward models built from spatially unresolved spectra. They help compare assumptions about the source and the gas.</p>
+  </div>
+  <div class="science-gallery two-up">
+<figure class="science-figure science-figure-wide">
+  <div class="figure-image"><img src="/assets/qso/disk_projection_wavelengths.webp" width="4197" height="1371" alt="Calculated disk brightness at 1,600, 2,000 and 2,400 angstroms with example absorber boundaries." loading="lazy" decoding="async"></div>
+  <figcaption>
+    <strong>Projected disk brightness at three wavelengths</strong>
+    <span>The image shows the brightness and absorbing zones for one offset-screen model. The quasar and absorber are spatially unresolved.</span>
+    <a href="/assets/qso/disk_projection_wavelengths.webp">Full-size image<span class="sr-only"> · Projected disk brightness at three wavelengths</span></a>
+  </figcaption>
+</figure>
+</div>
+  <details class="science-details"><summary>Additional geometry comparisons</summary>
+<div class="science-gallery two-up">
+<figure class="science-figure">
+  <div class="figure-image"><img src="/assets/qso/geometry_covering_chromatic.webp" width="3890" height="1436" alt="Predicted covering curves for centered and offset circular screens, with sampled wavelengths marked." loading="lazy" decoding="async"></div>
+  <figcaption>
+    <strong>Model covering as a function of wavelength</strong>
+    <span>Changing the position of the screen changes how different parts of the model disk contribute to the observed flux.</span>
+    <a href="/assets/qso/geometry_covering_chromatic.webp">Full-size image<span class="sr-only"> · Model covering as a function of wavelength</span></a>
+  </figcaption>
+</figure>
+<figure class="science-figure">
+  <div class="figure-image"><img src="/assets/qso/empirical_vs_geometry.webp" width="2081" height="778" alt="Empirical and offset-screen covering curves with inferred zone radii for two screen configurations." loading="lazy" decoding="async"></div>
+  <figcaption>
+    <strong>Empirical and geometric covering models</strong>
+    <span>The simple circular-screen geometry reproduces some behavior of the empirical fits. The fitted radii depend on the assumed geometry.</span>
+    <a href="/assets/qso/empirical_vs_geometry.webp">Full-size image<span class="sr-only"> · Empirical and geometric covering models</span></a>
+  </figcaption>
+</figure>
+</div>
+</details>
+  <div class="qso-interactive">
+    <div><h3>Three-dimensional model</h3><p>Compare the emitting disk and the projected absorber outlines. The vertical separation is schematic.</p></div>
+    <a class="button desktop-model-link" href="/interactive/disk_absorber_interactive.html">Open interactive model <span aria-hidden="true">↗</span></a>
+  </div>
+  <div class="static-model"><figure class="science-figure">
+  <div class="figure-image"><img src="/assets/qso/disk_absorber_3d.webp" width="2144" height="2111" alt="A model brightness map beneath two projected absorber boundaries at schematic line-of-sight heights." loading="lazy" decoding="async"></div>
+  <figcaption>
+    <strong>Three-dimensional view of the model</strong>
+    <span>The two outlines illustrate how different zones cover the source. Their placement along the line of sight is schematic.</span>
+    <a href="/assets/qso/disk_absorber_3d.webp">Full-size image<span class="sr-only"> · Three-dimensional view of the model</span></a>
+  </figcaption>
+</figure></div>
+</div></section>
+<section class="shell qso-intro" id="next-steps">
+  <h2>Ongoing work</h2>
+  <div class="section-copy">
+    <p>I’m developing a joint fit for the excitation and absorption profiles using Markov chain Monte Carlo. The aim is to see which constraints survive when level populations, covering and line-profile uncertainties are inferred together.</p>
+  </div>
+</section>
+  </main>
   <footer class="site-footer"><div class="shell footer-layout">
     <span>© <span data-current-year>2026</span> Daniil Lysenko</span>
-    <div class="footer-right"><a href="mailto:daniil.lysenko5002@gmail.com">Email</a><span class="footer-separator" aria-hidden="true">/</span><a href="https://github.com/dlysenko05" rel="me noopener" target="_blank">GitHub ↗</a><span class="footer-separator" aria-hidden="true">/</span><a href="cv.html">CV</a></div>
+    <div class="footer-right">
+      <a href="mailto:daniil.lysenko5002@gmail.com">Email</a>
+      <a href="https://github.com/dlysenko05" rel="me">GitHub</a>
+      <a href="/cv.html">CV</a>
+    </div>
   </div></footer>
-  <script src="site.js" defer></script>
 </body>
 </html>
