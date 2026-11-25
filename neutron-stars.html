@@ -28,7 +28,7 @@
       <a href="/contact.html">Contact</a>
     </nav>
     <div class="nav-actions">
-      <button class="theme-toggle" type="button" aria-label="Switch to dark theme"><span class="theme-glyph" aria-hidden="true">☾</span><span class="theme-word">Dark</span></button>
+      <button class="theme-toggle" type="button" aria-label="Switch to dark theme"><svg class="icon theme-icon-moon" aria-hidden="true" focusable="false"><use href="/assets/icons/lucide.svg#moon"/></svg><svg class="icon theme-icon-sun" aria-hidden="true" focusable="false"><use href="/assets/icons/lucide.svg#sun"/></svg><span class="theme-word">Dark</span></button>
       <button class="menu-toggle" type="button" aria-controls="primary-nav" aria-expanded="false" aria-label="Open navigation"><span></span><span></span><span></span><span class="menu-word">Menu</span></button>
     </div>
   </div></header>
@@ -43,7 +43,7 @@
   <section class="detail-section" aria-labelledby="eos">
     <h2 id="eos">Equation of state and equilibrium</h2>
     <p>I derived the relativistic zero-temperature equation of state for an ideal neutron–proton–electron Fermi gas. I then implemented six numerical solvers in Python for the Tolman–Oppenheimer–Volkoff equations, which determine hydrostatic equilibrium for a spherical star in general relativity.</p>
-    <p>To compare the solvers, I investigated numerical integration, interpolation of tabulated equations of state and treatment of the stellar surface. Using the published BSk24 equation of state as a benchmark, I reproduced its reference maximum mass of about 2.28 solar masses, with a radius of 11.08 km at that maximum.</p>
+    <p>To compare the solvers, I investigated numerical integration, interpolation of tabulated equations of state and treatment of the stellar surface. Using the published BSk24 equation of state as a benchmark, I reproduced its reference maximum mass and corresponding radius. I obtained <strong>about 2.28 solar masses</strong> (<var>M</var><sub>max</sub> ≈ 2.28 <var>M</var><sub>⊙</sub>) and <var>R</var> = 11.08 km.</p>
     <p>My independent <a href="/nsinduct.html">NSInduct</a> project uses a reduced magnetic shell model to study a different question.</p>
   </section>
 </div>

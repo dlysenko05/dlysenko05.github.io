@@ -28,7 +28,7 @@
       <a href="/contact.html">Contact</a>
     </nav>
     <div class="nav-actions">
-      <button class="theme-toggle" type="button" aria-label="Switch to dark theme"><span class="theme-glyph" aria-hidden="true">☾</span><span class="theme-word">Dark</span></button>
+      <button class="theme-toggle" type="button" aria-label="Switch to dark theme"><svg class="icon theme-icon-moon" aria-hidden="true" focusable="false"><use href="/assets/icons/lucide.svg#moon"/></svg><svg class="icon theme-icon-sun" aria-hidden="true" focusable="false"><use href="/assets/icons/lucide.svg#sun"/></svg><span class="theme-word">Dark</span></button>
       <button class="menu-toggle" type="button" aria-controls="primary-nav" aria-expanded="false" aria-label="Open navigation"><span></span><span></span><span></span><span class="menu-word">Menu</span></button>
     </div>
   </div></header>
@@ -40,11 +40,11 @@
   <ul class="project-meta-strip"><li>Independent research</li><li>Open-source software</li><li>v0.2.0 · BSD 3-Clause</li></ul>
 </section>
 <nav class="shell section-links" aria-label="Software resources">
-  <a href="https://github.com/dlysenko05/NSInduct">Source code</a>
+  <a href="https://github.com/dlysenko05/NSInduct"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/icons/lucide.svg#code-xml"/></svg>Source code</a>
   <a href="https://github.com/dlysenko05/NSInduct/releases/tag/v0.2.0">v0.2.0 release</a>
   <a href="https://github.com/dlysenko05/NSInduct/blob/v0.2.0/SCIENCE.md">Technical documentation</a>
   <a href="https://github.com/dlysenko05/NSInduct/tree/v0.2.0/notebooks">Reproduction notebooks</a>
-  <a href="https://zenodo.org/records/24515026">Zenodo archive</a>
+  <a href="https://zenodo.org/records/24515026"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/icons/lucide.svg#link"/></svg>Zenodo archive</a>
   <a href="#citation">Citation</a>
 </nav>
 <section class="shell qso-intro" aria-labelledby="winding">
@@ -57,7 +57,7 @@
 <section class="qso-band section" aria-labelledby="halving"><div class="shell">
   <h2 class="qso-section-title" id="halving">Magnetic braking in the shell</h2>
   <div class="section-copy">
-    <p>With feedback enabled, doubling the seed field approximately halves the time for the kinetic energy of differential rotation to fall by half. In the no-feedback control without viscosity, the field winds up while the kinetic energy stays constant.</p>
+    <p>With feedback enabled, <strong>doubling the seed field approximately halves the time</strong> for the kinetic energy of differential rotation to fall by half. In the no-feedback control without viscosity, the field winds up while the kinetic energy stays constant.</p>
   </div>
   <table class="result-table">
     <caption>Kinetic-energy halving times at magnetic diffusivity 2 × 10<sup>−5</sup>, in inverse initial-shear units</caption>
@@ -69,7 +69,7 @@
     </tbody>
   </table>
   <div class="section-copy">
-    <p>The half-times support approximate inverse-field Alfvén scaling for these initial conditions and this shell. They measure energy transfer in a reduced model with fixed poloidal flux. Estimating a stellar spin-down time would require a model for the star and its external torque.</p>
+    <p>The half-times support approximate <em>inverse-field Alfvén scaling</em> for these initial conditions and this shell. They measure energy transfer in a reduced model with fixed poloidal flux. Estimating a stellar spin-down time would require a model for the star and its external torque.</p>
   </div>
   <div class="science-gallery two-up">
 <figure class="science-figure science-figure-wide">
@@ -93,7 +93,7 @@
   <div class="figure-image"><img src="/assets/nsinduct/matched_energy.png" width="1350" height="510" alt="Nearly overlapping finite-difference and Dedalus curves show differential-rotation kinetic energy falling and toroidal magnetic energy rising." loading="lazy" decoding="async"></div>
   <figcaption>
     <strong>Energy exchange across solvers</strong>
-    <span>For an RMS poloidal field of 0.070 and diffusivity of 2 × 10⁻⁵, the two solvers agree closely on the early energy exchange. Each run uses its initial kinetic energy as the energy unit.</span>
+    <span>For an RMS poloidal field of 0.070 and diffusivity of 2 × 10<sup>−5</sup>, the two solvers agree closely on the early energy exchange. Each run uses its initial kinetic energy as the energy unit.</span>
     <a href="/assets/nsinduct/matched_energy.png">Full-size image<span class="sr-only"> · Energy exchange across solvers</span></a>
   </figcaption>
 </figure>
@@ -102,7 +102,7 @@
 <section class="qso-band section" id="citation"><div class="shell">
   <h2 class="qso-section-title">Cite NSInduct</h2>
   <p class="section-copy">This release is archived research software. Use the DOI for the version you used when citing the code.</p>
-  <blockquote class="software-citation">Lysenko, D. (2026). <cite>NSInduct: Torsional magnetic winding and braking in a spherical shell</cite> (v0.2.0) [Computer software]. Zenodo. <a href="https://doi.org/10.5281/zenodo.24515026">10.5281/zenodo.24515026</a>.</blockquote>
+  <blockquote class="software-citation">Lysenko, D. (2026). <cite>NSInduct: Torsional magnetic winding and braking in a spherical shell</cite> (v0.2.0) [Computer software]. Zenodo. <a href="https://doi.org/10.5281/zenodo.24515026" class="icon-link"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/icons/lucide.svg#link"/></svg>10.5281/zenodo.24515026</a>.</blockquote>
   <p class="doi-badge"><a href="https://doi.org/10.5281/zenodo.24515025" aria-label="NSInduct DOI record for all versions"><img src="/assets/nsinduct/doi.svg" width="193" height="20" alt="Zenodo DOI badge for NSInduct"></a></p>
   <p class="section-copy">I generated both figures for the tagged release. The project is distributed under the <a href="/assets/nsinduct/LICENSE.txt">BSD 3-Clause license</a>.</p>
 </div></section>

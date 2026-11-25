@@ -28,7 +28,7 @@
       <a href="/contact.html">Contact</a>
     </nav>
     <div class="nav-actions">
-      <button class="theme-toggle" type="button" aria-label="Switch to dark theme"><span class="theme-glyph" aria-hidden="true">☾</span><span class="theme-word">Dark</span></button>
+      <button class="theme-toggle" type="button" aria-label="Switch to dark theme"><svg class="icon theme-icon-moon" aria-hidden="true" focusable="false"><use href="/assets/icons/lucide.svg#moon"/></svg><svg class="icon theme-icon-sun" aria-hidden="true" focusable="false"><use href="/assets/icons/lucide.svg#sun"/></svg><span class="theme-word">Dark</span></button>
       <button class="menu-toggle" type="button" aria-controls="primary-nav" aria-expanded="false" aria-label="Open navigation"><span></span><span></span><span></span><span class="menu-word">Menu</span></button>
     </div>
   </div></header>
@@ -38,9 +38,9 @@
 </section>
 <section class="shell about-feature" aria-labelledby="biography">
   <div class="about-description">
-    <h2 id="biography">Academic background</h2>
-    <p>I started studying physics at Novosibirsk State University in 2023 and transferred to Alferov University in 2024. I’m on the astrophysics track and expect to finish my B.Sc. in June 2027.</p>
-    <p>I joined the Ioffe Institute’s Theoretical Astrophysics Department as a research assistant in October 2024. I began there with numerical work on neutron-star structure. My current projects use spectroscopy to study gas around quasars and statistical models to reconstruct gamma-ray burst light curves.</p>
+    <h2 id="biography">Physics and astrophysics</h2>
+    <p>I’m a physics undergraduate at <strong>Alferov University</strong> and a research assistant at the <strong>Ioffe Institute</strong> in St. Petersburg.</p>
+    <p>I began my research with numerical work on neutron-star structure. I now use <em>absorption spectroscopy</em> to study gas around quasars and statistical models to reconstruct gamma-ray burst light curves.</p>
     <a class="underlined-link" href="/research.html">My research</a>
   </div>
   <figure class="about-figure">
@@ -48,11 +48,53 @@
     <figcaption>Presenting at a student conference</figcaption>
   </figure>
 </section>
+<section class="shell about-facts" aria-labelledby="background">
+  <h2 id="background">Academic background</h2>
+  <div class="section-copy academic-history">
+    <div>
+      <h3><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/icons/lucide.svg#graduation-cap"/></svg>Education</h3>
+      <ol class="academic-timeline" role="list">
+        <li>
+          <p><strong>Alferov University</strong><br>B.Sc. in Physics, Astrophysics Track</p>
+          <p class="academic-meta">Expected <time datetime="2027-06">June 2027</time> · GPA 4.82/5.00</p>
+        </li>
+        <li>
+          <p><strong>Novosibirsk State University</strong><br>Undergraduate physics studies</p>
+          <p class="academic-meta">2023–2024 · First-year GPA 4.90/5.00</p>
+        </li>
+      </ol>
+    </div>
+    <div>
+      <h3><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/icons/lucide.svg#telescope"/></svg>Research experience</h3>
+      <ol class="academic-timeline" role="list">
+        <li>
+          <p><strong><a href="/nsinduct.html">NSInduct</a></strong><br>Independent research on magnetic winding and braking</p>
+          <p class="academic-meta">v0.2.0 archived <time datetime="2026-11">November 2026</time> · <a href="https://doi.org/10.5281/zenodo.24515026">Zenodo DOI</a></p>
+        </li>
+        <li>
+          <p><strong>Ioffe Institute</strong><br>Research assistant, Theoretical Astrophysics Department</p>
+          <p class="academic-meta"><time datetime="2024-10">October 2024</time>–present</p>
+          <p class="academic-projects"><a href="/quasar.html">Quasar spectroscopy</a> · <a href="/grb.html">Gamma-ray bursts</a> · <a href="/neutron-stars.html">Neutron-star structure</a></p>
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>
+<section class="shell about-facts" aria-labelledby="achievements">
+  <h2 id="achievements">Selected achievements</h2>
+  <ul class="section-copy achievement-list" role="list">
+    <li><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/icons/lucide.svg#presentation"/></svg><span><strong>Four contributed scientific talks</strong><span class="academic-meta">Alferov University student conferences · 2025–2026</span></span></li>
+    <li><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/icons/lucide.svg#award"/></svg><span><strong>Scholarship for Good Academic Standing</strong><span class="academic-meta">2023–present</span></span></li>
+    <li><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/icons/lucide.svg#medal"/></svg><span><strong>Federal Gold Medal for Outstanding Academic Achievement</strong><time class="academic-meta" datetime="2023">2023</time></span></li>
+    <li><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/icons/lucide.svg#award"/></svg><span><strong>EducationUSA Opportunity Funds Program Grant</strong><time class="academic-meta" datetime="2022">2022</time></span></li>
+  </ul>
+</section>
 <section class="shell about-facts" aria-labelledby="teaching">
   <h2 id="teaching">Teaching</h2>
   <div class="section-copy">
-    <p>I tutor mathematics and physics in English and Russian through ProMath Online and independently. I work with GCSE and IGCSE, A-Level and IB students, and help students prepare for exams and competitions.</p>
-    <p>I also serve as a student group representative in Alferov University’s Department of Physics.</p>
+    <p class="teaching-role"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/icons/lucide.svg#book-open"/></svg><strong>Mathematics and physics tutoring</strong></p>
+    <p>I tutor in English and Russian through <strong>Pro Math Online</strong> and independently. I work with GCSE, IGCSE, A-Level and IB students and help them prepare for exams and competitions.</p>
+    <p class="academic-meta">I also serve as a student group representative in Alferov University’s Department of Physics.</p>
   </div>
 </section>
   </main>

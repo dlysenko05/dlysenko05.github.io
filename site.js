@@ -30,7 +30,10 @@
   const storageKey = 'daniil-site-theme';
   const preference = matchMedia('(prefers-color-scheme: dark)');
   let theme;
-  try { theme = localStorage.getItem(storageKey); } catch {}
+  const readSavedTheme = () => {
+    try { theme = localStorage.getItem(storageKey); } catch {}
+  };
+  readSavedTheme();
   const preferredTheme = () => theme === 'dark' || theme === 'light' ? theme : preference.matches ? 'dark' : 'light';
   root.dataset.theme = preferredTheme();
   root.classList.add('js');
@@ -43,7 +46,6 @@
         const nextLabel = current === 'dark' ? 'Light' : 'Dark';
         root.dataset.theme = current;
         themeToggle.setAttribute('aria-label', `Switch to ${nextLabel.toLowerCase()} theme`);
-        themeToggle.querySelector('.theme-glyph').textContent = current === 'dark' ? '☀' : '☾';
         themeToggle.querySelector('.theme-word').textContent = nextLabel;
         document.querySelector('meta[name="theme-color"]').content = current === 'dark' ? '#0d1421' : '#faf9f6';
       };
@@ -54,6 +56,12 @@
         updateTheme();
       });
       preference.addEventListener('change', updateTheme);
+      window.addEventListener('pageshow', event => {
+        if (event.persisted) {
+          readSavedTheme();
+          updateTheme();
+        }
+      });
     }
 
     const desktop = matchMedia('(width > 820px)');

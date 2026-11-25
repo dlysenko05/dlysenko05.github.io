@@ -28,7 +28,7 @@
       <a href="/contact.html">Contact</a>
     </nav>
     <div class="nav-actions">
-      <button class="theme-toggle" type="button" aria-label="Switch to dark theme"><span class="theme-glyph" aria-hidden="true">☾</span><span class="theme-word">Dark</span></button>
+      <button class="theme-toggle" type="button" aria-label="Switch to dark theme"><svg class="icon theme-icon-moon" aria-hidden="true" focusable="false"><use href="/assets/icons/lucide.svg#moon"/></svg><svg class="icon theme-icon-sun" aria-hidden="true" focusable="false"><use href="/assets/icons/lucide.svg#sun"/></svg><span class="theme-word">Dark</span></button>
       <button class="menu-toggle" type="button" aria-controls="primary-nav" aria-expanded="false" aria-label="Open navigation"><span></span><span></span><span></span><span class="menu-word">Menu</span></button>
     </div>
   </div></header>
@@ -48,7 +48,7 @@
   <section class="detail-section" aria-labelledby="grb-tests">
     <h2 id="grb-tests">Synthetic and observed bursts</h2>
     <p>I tested the reconstruction on synthetic single-pulse, double-pulse and faint light curves. The errors, measured as root-mean-square error relative to the peak signal, were approximately 3%, 3.3% and 7.2%, respectively. I also used simulated light curves to test how well the method could recover an imposed time delay between detectors.</p>
-    <p>I applied the model to time-tagged events from three Fermi/GBM bursts and checked sensitivity to detector choice and time bins of 16–64 ms. For two short bursts, fixing the Fourier frequencies improved sampling. Nominal 90% posterior predictive intervals contained observed counts in 76–78% of the bins for those bursts.</p>
+    <p>I applied the model to time-tagged events from three Fermi/GBM bursts and checked sensitivity to detector choice and time bins of 16–64 ms. For two short bursts, fixing the Fourier frequencies improved sampling. Nominal 90% <em>posterior predictive intervals</em> contained observed counts in <strong>76–78% of the bins</strong> for those bursts.</p>
     <p>The synthetic tests also showed overconfidence around some sharp features at high signal-to-noise. I’m using these checks to study when weak reconstructed emission affects duration estimates and how much fine structure the data support. Model-based durations depend on the analysis window and background treatment, so I distinguish them from the catalog <i>T</i><sub>90</sub>.</p>
   </section>
 </div>
